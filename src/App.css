@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(to bottom, #7474bf, #348ac7);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App {
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile,
+.modal {
+  background: #fefefe;
+  box-shadow: 0 10px 40px -10px rgb(0 64 128 / 10%);
+  padding: 15px;
+  z-index: 1;
+  transition: 0.5s !important;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  min-width: 60%;
+  margin: 5px;
+  max-width: 80%;
+}
+.modal{
+  min-width: 30%;;
+}
+.profile:hover,
+.modal:hover {
+  box-shadow: 0 21px 36px 0 rgb(0 64 128 / 30%);
+}
+.profile img {
+  height: 125px;
+  width: 125px;
+  box-shadow: 0 10px 40px -10px rgb(0 64 128 / 10%);
+  border-radius: 5px;
+}
+.main,
+.counters {
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0;
+  text-align: center;
+}
+.count p {
+  color: #333;
+}
+.main{
+  width:80%;
+  justify-content: space-around;
+}
+.github-username{
+  margin:10px 0;
 }
