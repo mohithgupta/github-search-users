@@ -25,8 +25,7 @@ useEffect(()=>{
     setData(data);
     console.log(data);
   });
-
-},[login])
+},[username,login])
 
 if(data){
   document.getElementById("link").setAttribute("href", `${data.html_url}`)
@@ -45,15 +44,15 @@ if(data){
         />
       </div>
       <div className="profile">
-        <div className="flex main">
-          <img src={data.avatar_url} alt="" />
+        <div align="center" className="flex main">
+          <img src={data.avatar_url} alt="Github User Profile Pic" />
           <div className="main__right">
-            <h3>{data.name}</h3>
+            <h3>{data.name ? data.name : "User Not Found"}</h3>
             <div className="flex github-username">
               <GitHubIcon style={{ marginRight: "5px" }} />
               <p style={{ color: "#333" }}>{data.login}</p>
             </div>
-            <a href="https://github.com/mohithgupta" target="_blank" id="link">Visit Profile</a>
+            <a href="https://github.com/mohithgupta" target="_blank" rel="noreferrer" id="link">Visit Profile</a>
           </div>
         </div>
         <p>{data.bio}</p>
