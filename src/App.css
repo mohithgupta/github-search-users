@@ -33,9 +33,6 @@ body {
   margin: 5px;
   max-width: 80%;
 }
-.profile{
- display: ;
-}
 .modal{
   min-width: 30%;;
 }
@@ -68,9 +65,23 @@ body {
   color: #333;
 }
 .main{
-  width:80%;
   justify-content: space-around;
 }
 .github-username{
   margin:10px 0;
+}
+
+@media(max-width:450px){
+
+  .profile{
+    padding:5px;
+    max-width: 100%;;
+  }
+  .main{
+    justify-content: space-evenly;
+  }
+  .count{
+    border:none;
+    padding:none;
+  }
 }

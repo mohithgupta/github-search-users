@@ -45,14 +45,14 @@ if(data){
       </div>
       <div className="profile">
         <div align="center" className="flex main">
-          <img src={data.avatar_url} alt="Github User Profile Pic" />
+          <img src={data.avatar_url} alt={data.name ? data.name+" 's pic" : "User Not Found"}/>
           <div className="main__right">
             <h3>{data.name ? data.name : "User Not Found"}</h3>
             <div className="flex github-username">
               <GitHubIcon style={{ marginRight: "5px" }} />
               <p style={{ color: "#333" }}>{data.login}</p>
             </div>
-            <a href="https://github.com/mohithgupta" target="_blank" rel="noreferrer" id="link">Visit Profile</a>
+            <a href="https://github.com/mohithgupta" target="_blank" rel="noreferrer" id="link">{data.name ? "Visit Profile" : "Back to HomePage"}</a>
           </div>
         </div>
         <p>{data.bio}</p>
